@@ -2,14 +2,14 @@
 
 ## Overview
 
-[**Generator-Snippod-Hackathon**]() is a starter kit like [yeogurt](https://github.com/larsonjj/generator-yeogurt) boilerplate. This boilerplate is made for **Snippod's baseline**.
+[**Generator-Snippod-Hackathon**](https://github.com/shalomeir/generator-snippod-hackathon) is a starter kit like [yeogurt](https://github.com/larsonjj/generator-yeogurt) boilerplate. This boilerplate is made for **Snippod's baseline**.
 Snippod is a new information sharing service. And we'd like to this service based on full stack single page web application architecture.
 Snippod's architecture used a this kind of technology, **React + Flux + Express (Node.js) + Mongo DB**.
 [This stack](http://www.gliffy.com/go/publish/7401617) is presented by diagram too.
 
 ## Base Repository, Module
 
-[Generator-Snippod-Hackathon] is based on [Yeogurt Generator](https://github.com/larsonjj/generator-yeogurt). 
+[Generator-Snippod-Hackathon](https://github.com/shalomeir/generator-snippod-hackathon) is based on [Yeogurt Generator](https://github.com/larsonjj/generator-yeogurt). 
 Also functionally we make this based on [Hackathon Starter](https://github.com/sahat/hackathon-starter) especially theme and auth function.
 And we recommend to check this [react-tweets](https://github.com/scotch-io/react-tweets) examples.
 
