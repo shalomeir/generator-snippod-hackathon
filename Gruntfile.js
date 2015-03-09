@@ -31,6 +31,7 @@ module.exports = function(grunt) {
     express: 'grunt-express-server'
   });
 
+
   // Load the include-all library in order to require all of our grunt
   // configurations and task registrations dynamically.
   var includeAll = require('include-all');
@@ -57,6 +58,9 @@ module.exports = function(grunt) {
     }
   }
 
+  //for ES6 (By Shalomeir)
+  grunt.loadNpmTasks('grunt-esnext');
+
   // Load task functions
   var utilConfig = loadTasks('./grunt/config/util');
   var compileConfig = loadTasks('./grunt/config/compile');
@@ -66,6 +70,8 @@ module.exports = function(grunt) {
   var testConfig = loadTasks('./grunt/config/test');
   var registerDefinitions = loadTasks('./grunt/tasks');
 
+
+
   // (ensure that a default task exists)
   if (!registerDefinitions.default) {
     registerDefinitions.
@@ -73,6 +79,7 @@ module.exports = function(grunt) {
       grunt.registerTask('default', []);
     };
   }
+
 
   // Run task functions to configure Grunt.
   invokeConfigFn(utilConfig);

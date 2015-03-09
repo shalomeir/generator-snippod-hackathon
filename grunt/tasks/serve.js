@@ -25,7 +25,7 @@ var taskConfig = function(grunt) {
       'browserify:server',
       'sass:server',
       'styleguide:server',
-      'jsdoc:server',
+      //'jsdoc:server',
       'autoprefixer:server'
     ]);
 

@@ -7,7 +7,7 @@ var taskConfig = function(grunt) {
   grunt.config.set('browserify', {
     server: {
       options: {
-        transform:  [ require('grunt-react').browserify ],
+        transform: [ [ require('grunt-react').browserify, { harmony: true } ] ],
         browserifyOptions: {
           debug: true
         },
@@ -19,7 +19,7 @@ var taskConfig = function(grunt) {
     },
     dist: {
       options: {
-        transform:  [ require('grunt-react').browserify ],
+        transform: [ [ require('grunt-react').browserify, { harmony: true } ] ],
         browserifyOptions: {
           debug: true
         },
@@ -37,7 +37,7 @@ var taskConfig = function(grunt) {
     },
     test: {
       options: {
-        transform:  [ require('grunt-react').browserify ],
+        transform: [ [ require('grunt-react').browserify, { harmony: true } ] ],
         browserifyOptions: {
           debug: true
         },

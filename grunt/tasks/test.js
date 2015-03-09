@@ -15,12 +15,12 @@ var taskConfig = function(grunt) {
       'browserify:test'
     ]);
 
-    if (target === 'watch') {
-      grunt.task.run(['karma:unitWatch']);
-    }
-    else {
-      grunt.task.run(['karma:unit']);
-    }
+    //if (target === 'watch') {
+    //  grunt.task.run(['karma:unitWatch']);
+    //}
+    //else {
+    //  grunt.task.run(['karma:unit']);
+    //}
 
     // Clean up temp files
     grunt.task.run([

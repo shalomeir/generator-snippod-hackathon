@@ -13,11 +13,15 @@ var getState = function() {
   };
 };
 
-var MessagesComponent = React.createClass({
+var Messages = React.createClass({
+  displayName: 'Messages',
+
   mixins: [messagesStore.mixin],
+
   getInitialState: function() {
     return getState();
   },
+
   render: function() {
     var messages = this.state.messages;
 
@@ -55,4 +59,4 @@ var MessagesComponent = React.createClass({
   }
 });
 
-module.exports = MessagesComponent;
+module.exports = Messages;
