@@ -4,7 +4,8 @@
 
 'use strict';
 
-var React = require('react');
+var React = require('react'),
+    DocumentTitle = require('react-document-title');
 
 var getState = function() {
   return {
@@ -21,12 +22,12 @@ var Topic = React.createClass({
   render: function() {
     return (
       /* jshint ignore:start */
-      <DefaultLayout>
+      <DocumentTitle title='Topic title'>
         <div className="main-container">
           <div className="yeogurt-info">
-            <h1>Welcome to Yeogurt!</h1>
+            <h1>Welcome to Snippod's boilerplate!</h1>
             <p>
-              Take a look at the <a href="https://github.com/larsonjj/generator-yeogurt#yeogurt-generator">documentation</a> and start mixing up something awesome.
+              Take a look at the <a href="https://github.com/shalomeir/generator-snippod-hackathon">documentation</a> and start mixing up something awesome.
             </p>
             <p>
               <img src="/images/yeogurt-swirl.png" width="75px" className="logo" />
@@ -36,8 +37,7 @@ var Topic = React.createClass({
             </p>
           </div>
         </div>
-        <code className="version">v0.14.2</code>
-      </DefaultLayout>
+      </DocumentTitle>
       /* jshint ignore:end */
     );
   },

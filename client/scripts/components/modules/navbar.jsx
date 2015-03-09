@@ -2,7 +2,9 @@
 
 var React = require('react'),
     userStore = require('../../stores/user'),
-    userActions = require('../../actions/user');
+    userActions = require('../../actions/user'),
+    Router = require('react-router'),
+    { Link } = Router;
 
 var getState = function() {
   return {
@@ -28,10 +30,10 @@ var NavBar = React.createClass({
           Hello {user.firstName ? user.firstName : user.email}
         </li>
         <li className="nav-item">
-          <Link url="/settings">My Account</Link>
+          <Link to="settings">My Account</Link>
         </li>
         <li className="nav-item">
-          <Link url="/logout" onClick={this.handleLogout}>Logout</Link>
+          <Link to="/logout" onClick={this.handleLogout}>Logout</Link>
         </li>
       </ul>
       /* jshint ignore:end */
@@ -39,10 +41,10 @@ var NavBar = React.createClass({
       /* jshint ignore:start */
       <ul className="nav-list pull-right">
         <li className="nav-item">
-          <Link url="/login">Login</Link>
+          <Link to="login">Login</Link>
         </li>
         <li className="nav-item">
-          <Link url="/signup">Create Account</Link>
+          <Link to="signup">Create Account</Link>
         </li>
       </ul>
       /* jshint ignore:end */
@@ -54,7 +56,7 @@ var NavBar = React.createClass({
         <div className="navbar">
           <div className="nav">
             <ul className="nav-list pull-left">
-              <li className="nav-item"><Link url="/">Home</Link></li>
+              <li className="nav-item"><Link to="root">Home</Link></li>
             </ul>
             {navLinks}
           </div>

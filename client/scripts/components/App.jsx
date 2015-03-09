@@ -39,10 +39,11 @@ var App = React.createClass({
     return (
       /* jshint ignore:start */
       <DocumentTitle title='Snippod Generator Boilerplate'>
-        <h1> hello App.js 입니다.</h1>
-        <NavBar user={this.state.user} />
-        <Messages messages={this.state.messages} />
-        <RouteHandler {...this.props} />
+        <div className='App'>
+          <NavBar user={this.state.user} />
+          <Messages messages={this.state.messages} />
+          <RouteHandler {...this.props} />
+        </div>
       </DocumentTitle>
       /* jshint ignore:end */
     );
