@@ -1,9 +1,11 @@
 'use strict';
 
-var React = require('react');
-var DefaultLayout = require('../layouts/default.jsx');
-var userStore = require('../../stores/user');
-var userActions = require('../../actions/user');
+var React = require('react'),
+    DefaultLayout = require('../layouts/default.jsx'),
+    userStore = require('../../stores/user'),
+    userActions = require('../../actions/user'),
+    Authentication = require('../../utils/authentication') ;
+
 
 var getState = function() {
   return {
@@ -12,7 +14,7 @@ var getState = function() {
 };
 
 var SettingsComponent = React.createClass({
-  mixins: [userStore.mixin],
+  mixins: [userStore.mixin, Authentication],
   getInitialState: function() {
     return getState();
   },

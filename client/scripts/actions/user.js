@@ -8,6 +8,8 @@ var userDefaults = require('../constants/defaults').user;
 var request = require('superagent');
 var serialize = require('form-serialize');
 var cookie = require('cookie');
+var router = require('../router');
+
 
 module.exports = {
 
@@ -94,7 +96,8 @@ module.exports = {
             callback.success(res);
           }
           if (options.successUrl) {
-            routeActions.setRoute(options.successUrl);
+            router.transitionTo(options.successUrl);
+            //routeActions.setRoute(options.successUrl);
           }
         }
         else {

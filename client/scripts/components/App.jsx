@@ -6,12 +6,10 @@ var React = require('react'),
     DocumentTitle = require('react-document-title'),
     { RouteHandler } = require('react-router'),
     { PropTypes } = React,
-    pageStore = require('../stores/page'),
     userStore = require('../stores/user');
 
 var getState = function() {
   return {
-    title: pageStore.get().title,
     user: userStore.get()
   };
 };
@@ -19,7 +17,7 @@ var getState = function() {
 var App = React.createClass({
   displayName: 'App',
 
-  mixins: [pageStore.mixin, userStore.mixin],
+  mixins: [userStore.mixin],
 
   propTypes: {
     params: PropTypes.object.isRequired,
@@ -27,7 +25,6 @@ var App = React.createClass({
   },
 
   componentDidMount: function() {
-    pageStore.emitChange();
     userStore.emitChange();
   },
 
@@ -38,16 +35,22 @@ var App = React.createClass({
   render() {
     return (
       /* jshint ignore:start */
-      <DocumentTitle title='Snippod Generator Boilerplate'>
+      <DocumentTitle title='App Main'>
         <div className='App'>
-          <NavBar user={this.state.user} />
-          <Messages messages={this.state.messages} />
-          <RouteHandler {...this.props} />
+          <NavBar {...this.props} user={this.state.user} />
+          <Messages />
+          <RouteHandler {...this.props} user={this.state.user} />
         </div>
       </DocumentTitle>
       /* jshint ignore:end */
     );
+  },
+
+  // Event handler for 'change' events coming from store mixins.
+  _onChange: function() {
+    this.setState(getState());
   }
+
 });
 
 module.exports = App;

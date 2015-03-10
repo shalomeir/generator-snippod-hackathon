@@ -1,25 +1,10 @@
 'use strict';
 
 var React = require('react'),
-    router = require('./router'),
-    userActions = require('./actions/user');
+    router = require('./router');
 
-// Check the auth status upon initialization,
-// should happen before rendering any templates
-userActions.isAuthenticated({
-
-  // Start routing once we have captured a user's auth status
-  complete: function() {
-    /* jshint ignore:start */
-    router.run((Handler, state) => {
-      React.render(<Handler {...state} />, document.getElementById('app-wrapper'));
-    });
-    /* jshint ignore:end */
-
-
-
-  }
-
+/* jshint ignore:start */
+router.run((Handler, state) => {
+  React.render(<Handler {...state} />, document.getElementById('app-wrapper'));
 });
-
-console.log('Welcome to Main.js');
+/* jshint ignore:end */

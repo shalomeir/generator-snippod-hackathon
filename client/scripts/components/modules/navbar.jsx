@@ -56,7 +56,7 @@ var NavBar = React.createClass({
         <div className="navbar">
           <div className="nav">
             <ul className="nav-list pull-left">
-              <li className="nav-item"><Link to="root">Home</Link></li>
+              <li className="nav-item"><Link to="app">Home</Link></li>
             </ul>
             {navLinks}
           </div>

@@ -53,6 +53,11 @@ var Messages = React.createClass({
       /* jshint ignore:end */
     );
   },
+
+  closeMessage: function(e) {
+    e.preventDefault();
+  },
+
   // Event handler for 'change' events coming from store mixins.
   _onChange: function() {
     this.setState(getState());

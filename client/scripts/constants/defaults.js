@@ -6,7 +6,7 @@ var Defaults = {
 
   page: {
     title: 'Home',
-    description: 'A React + Flux application',
+    description: 'Page Component - default',
     keywords: null
 
   },

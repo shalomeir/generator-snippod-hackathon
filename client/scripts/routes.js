@@ -14,7 +14,7 @@ var React = require('react'),
 var routes = (
   /* jshint ignore:start */
   <Route name='app' path='/' handler={App}>
-    <DefaultRoute name='root' handler={Topic} />
+    <DefaultRoute handler={Topic} />
     <Route name='login' path='/login' handler={Login} />
     <Route name='forgot' path='/login/forgot' handler={Forgot} />
     <Route name='signup' path='/signup' handler={SignUp} />

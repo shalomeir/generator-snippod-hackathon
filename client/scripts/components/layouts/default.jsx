@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-var Navbar = require('../modules/navbar.jsx');
+var NavBar = require('../modules/navbar.jsx');
 var Messages = require('../modules/messages.jsx');
 var pageStore = require('../../stores/page');
 var userStore = require('../../stores/user');
@@ -27,7 +27,7 @@ var DefaultComponent = React.createClass({
       /* jshint ignore:start */
       <div>
         <div className="main-nav">
-          <Navbar user={this.state.user} />
+          <NavBar user={this.state.user} />
         </div>
         <div className="default">
           <div className="main-container">
