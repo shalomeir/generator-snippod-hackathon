@@ -1,14 +1,10 @@
 'use strict';
 var userStore = require('../stores/user'),
-    pageActions = require('../actions/page'),
-    messagesActions = require('../actions/messages');
-
+    pageActions = require('../actions/page');
 
 var Authentication = {
   statics: {
     willTransitionTo: function (transition) {
-
-      messagesActions.setMessages({});
 
       if (!userStore.get().loggedIn) {
         pageActions.set(transition);

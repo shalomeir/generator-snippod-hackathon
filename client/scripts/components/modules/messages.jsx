@@ -45,7 +45,7 @@ var Messages = React.createClass({
 
     return (
       /* jshint ignore:start */
-      <div>
+      <div className="messages">
         {errors}
         {info}
         {success}

@@ -3,7 +3,6 @@
 var Dispatcher = require('../dispatchers/default');
 var userConstants = require('../constants/user');
 var messagesActions = require('./messages');
-var routeActions = require('./routes');
 var userDefaults = require('../constants/defaults').user;
 var request = require('superagent');
 var serialize = require('form-serialize');
@@ -27,7 +26,7 @@ module.exports = {
       .get('/user')
       .type('json')
       .set({
-        'authorization': 'Bearer ' + token,
+        'authorization': 'Bearer ' + token
       })
       .end(function(res) {
         if (res.ok) {
@@ -97,7 +96,6 @@ module.exports = {
           }
           if (options.successUrl) {
             router.transitionTo(options.successUrl);
-            //routeActions.setRoute(options.successUrl);
           }
         }
         else {
@@ -105,7 +103,7 @@ module.exports = {
             callback.error(res);
           }
           if (options.errorUrl) {
-            routeActions.setRoute(options.errorUrl);
+            router.transitionTo(options.errorUrl);
           }
         }
 
@@ -149,7 +147,7 @@ module.exports = {
     this.setUser(userDefaults);
 
     // Redirect to homepage
-    routeActions.setRoute('/');
+    router.transitionTo('/');
   },
 
   signup: function(form, callback) {
@@ -167,7 +165,7 @@ module.exports = {
     var cb = callback || function() {};
     cb.options = {
       successUrl: '/',
-      errorUrl: '/forgot'
+      errorUrl: '/login/forgot'
     };
     this.postForm(form, cb);
   },

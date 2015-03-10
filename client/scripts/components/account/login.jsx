@@ -5,8 +5,7 @@ var React = require('react'),
     userStore = require('../../stores/user'),
     userActions = require('../../actions/user'),
     Router = require('react-router'),
-    { Link, Navigation } = Router;
-//var { Route, RouteHandler, Link } = Router;
+    { Link } = Router;
 
 
 var getState = function() {
@@ -17,17 +16,8 @@ var getState = function() {
 var Login = React.createClass({
   displayName: 'Login',
 
-  mixins: [Navigation],
-
   getInitialState: function() {
     return getState();
-  },
-
-  componentWillReceiveProps: function(nextProps) {
-    if (this.props.user.loggedIn) {
-      console.log('Login success');
-      this.transitionBack();
-    }
   },
 
   render: function() {
@@ -48,7 +38,7 @@ var Login = React.createClass({
             </p>
 
             <button>Login</button>
-            <p><Link to="/forgot">Forgot your password? </Link></p>
+            <p><Link to="forgot">Forgot your password? </Link></p>
           </form>
         </div>
       </DocumentTitle>
@@ -60,10 +50,6 @@ var Login = React.createClass({
     e.preventDefault();
     var form = e.currentTarget;
     userActions.login(form);
-  },
-
-  transitionBack: function() {
-    this.transitionTo('/');
   }
 
 });

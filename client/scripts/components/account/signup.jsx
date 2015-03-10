@@ -1,34 +1,39 @@
 'use strict';
 
-var React = require('react');
-var DefaultLayout = require('../layouts/default.jsx');
-var userActions = require('../../actions/user');
+var React = require('react'),
+    DocumentTitle = require('react-document-title'),
+    userActions = require('../../actions/user');
 
 var SignupComponent = React.createClass({
+  displayName: 'SignUp',
+
+
   render: function() {
     return (
       /* jshint ignore:start */
-      <DefaultLayout>
-        <h3>Sign up</h3>
-        <form id="signup-form" method="post" action="/user" onSubmit={this.handleSubmit}>
-          <p>
-            <label htmlFor="email">Email:</label>
-            <input type="text" name="email" id="email" placeholder="Email" />
-          </p>
+      <DocumentTitle title='SignUp page'>
+        <div className="signup">
+          <h3>Sign up</h3>
+          <form id="signup-form" method="post" action="/user" onSubmit={this.handleSubmit}>
+            <p>
+              <label htmlFor="email">Email:</label>
+              <input type="text" name="email" id="email" placeholder="Email" />
+            </p>
 
-          <p>
-            <label htmlFor="password">Password:</label>
-            <input type="password" name="password" id="password" placeholder="Password" />
-          </p>
+            <p>
+              <label htmlFor="password">Password:</label>
+              <input type="password" name="password" id="password" placeholder="Password" />
+            </p>
 
-          <p>
-            <label htmlFor="confirmPassword">Confirm Password:</label>
-            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" />
-          </p>
+            <p>
+              <label htmlFor="confirmPassword">Confirm Password:</label>
+              <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" />
+            </p>
 
-          <button>Signup</button>
-        </form>
-      </DefaultLayout>
+            <button>Signup</button>
+          </form>
+        </div>
+      </DocumentTitle>
       /* jshint ignore:end */
     );
   },

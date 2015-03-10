@@ -1,42 +1,38 @@
+/**
+ *   Topic Component Description
+ */
+
 'use strict';
 
-var React = require('react');
-var DefaultLayout = require('../layouts/default.jsx');
-var userActions = require('../../actions/user');
+var React = require('react'),
+    DocumentTitle = require('react-document-title');
 
-var SignupComponent = React.createClass({
+var getState = function() {
+  return {
+  };
+};
+
+var User = React.createClass({
+  displayName: 'User',
+
+  getInitialState: function() {
+    return getState();
+  },
+
   render: function() {
+    var user = this.props.user;
+
     return (
       /* jshint ignore:start */
-      <DefaultLayout>
-        <h3>Sign up</h3>
-        <form id="signup-form" method="post" action="/user" onSubmit={this.handleSubmit}>
-          <p>
-            <label htmlFor="email">Email:</label>
-            <input type="text" name="email" id="email" placeholder="Email" />
-          </p>
-
-          <p>
-            <label htmlFor="password">Password:</label>
-            <input type="password" name="password" id="password" placeholder="Password" />
-          </p>
-
-          <p>
-            <label htmlFor="confirmPassword">Confirm Password:</label>
-            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" />
-          </p>
-
-          <button>Signup</button>
-        </form>
-      </DefaultLayout>
+      <DocumentTitle title='User'>
+        <div className="main-container">
+          <h1>Hello, {user.firstName ? user.firstName : user.email}.</h1>
+        </div>
+      </DocumentTitle>
       /* jshint ignore:end */
     );
-  },
-  handleSubmit: function(e) {
-    e.preventDefault();
-    var form = e.currentTarget;
-    userActions.signup(form);
   }
+
 });
 
-module.exports = SignupComponent;
+module.exports = User;

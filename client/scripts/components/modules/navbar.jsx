@@ -27,7 +27,7 @@ var NavBar = React.createClass({
       /* jshint ignore:start */
       <ul className="nav-list pull-right">
         <li className="nav-item">
-          Hello {user.firstName ? user.firstName : user.email}
+          Hello <Link to="user">{user.firstName ? user.firstName : user.email}</Link>
         </li>
         <li className="nav-item">
           <Link to="settings">My Account</Link>
@@ -52,14 +52,12 @@ var NavBar = React.createClass({
 
     return (
       /* jshint ignore:start */
-      <div>
-        <div className="navbar">
-          <div className="nav">
-            <ul className="nav-list pull-left">
-              <li className="nav-item"><Link to="app">Home</Link></li>
-            </ul>
-            {navLinks}
-          </div>
+      <div className="navbar">
+        <div className="nav">
+          <ul className="nav-list pull-left">
+            <li className="nav-item"><Link to="app">Home</Link></li>
+          </ul>
+          {navLinks}
         </div>
       </div>
       /* jshint ignore:end */
