@@ -12,7 +12,6 @@ var getState = function() {
 };
 
 var Snip = React.createClass({
-  displayName: 'Snip',
 
   getInitialState: function() {
     return getState();

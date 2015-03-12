@@ -5,8 +5,6 @@ var React = require('react'),
     userActions = require('../../actions/user');
 
 var SignupComponent = React.createClass({
-  displayName: 'SignUp',
-
 
   render: function() {
     return (

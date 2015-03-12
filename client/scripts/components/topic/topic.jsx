@@ -13,7 +13,6 @@ var getState = function() {
 };
 
 var Topic = React.createClass({
-  displayName: 'Topic',
 
   getInitialState: function() {
     return getState();

@@ -13,7 +13,6 @@ var getState = function() {
 };
 
 var User = React.createClass({
-  displayName: 'User',
 
   getInitialState: function() {
     return getState();

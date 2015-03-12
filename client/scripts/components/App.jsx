@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react'),
+    Reflux = require('reflux'),
     NavBar = require('./modules/navbar.jsx'),
     Messages = require('./modules/messages.jsx'),
     DocumentTitle = require('react-document-title'),
@@ -15,8 +16,6 @@ var getState = function() {
 };
 
 var App = React.createClass({
-  displayName: 'App',
-
   mixins: [userStore.mixin],
 
   propTypes: {

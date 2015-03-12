@@ -14,7 +14,6 @@ var getState = function() {
 };
 
 var Messages = React.createClass({
-  displayName: 'Messages',
 
   mixins: [messagesStore.mixin],
 

@@ -13,7 +13,6 @@ var getState = function() {
 };
 
 var NavBar = React.createClass({
-  displayName: 'NavBar',
 
   mixins: [userStore.mixin],
 

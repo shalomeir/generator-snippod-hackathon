@@ -14,7 +14,6 @@ var getState = function() {
 };
 
 var Login = React.createClass({
-  displayName: 'Login',
 
   getInitialState: function() {
     return getState();

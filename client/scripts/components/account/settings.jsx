@@ -13,7 +13,6 @@ var getState = function() {
 };
 
 var SettingsComponent = React.createClass({
-  displayName: 'Settings',
 
   mixins: [userStore.mixin, Authentication],
 
