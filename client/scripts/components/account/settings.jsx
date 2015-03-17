@@ -1,27 +1,18 @@
 'use strict';
 
 var React = require('react'),
+    Reflux = require('reflux'),
     DocumentTitle = require('react-document-title'),
-    userStore = require('../../stores/user'),
-    userActions = require('../../actions/user'),
+    userActions = require('../../actions/userActions'),
     Authentication = require('../../utils/authentication') ;
 
-var getState = function() {
-  return {
-    user: userStore.get()
-  };
-};
 
-var SettingsComponent = React.createClass({
+var Settings = React.createClass({
 
-  mixins: [userStore.mixin, Authentication],
-
-  getInitialState: function() {
-    return getState();
-  },
+  mixins: [Authentication],
 
   render: function() {
-    var user = this.state.user;
+    var user = this.props.user;
 
     return (
       /* jshint ignore:start */
@@ -96,12 +87,8 @@ var SettingsComponent = React.createClass({
     e.preventDefault();
     var form = e.currentTarget;
     userActions.destroy(form);
-  },
-
-  // Event handler for 'change' events coming from store mixins.
-  _onChange: function() {
-    this.setState(getState());
   }
+
 });
 
-module.exports = SettingsComponent;
+module.exports = Settings;

@@ -4,21 +4,26 @@
 
 'use strict';
 
-var React = require('react');
-var messagesStore = require('../../stores/messages');
-
-var getState = function() {
-  return {
-    messages: messagesStore.get()
-  };
-};
+var React = require('react'),
+    Reflux = require('reflux'),
+    { PropTypes } = React,
+    messagesStore = require('../../stores/messagesStore');
 
 var Messages = React.createClass({
 
-  mixins: [messagesStore.mixin],
+  mixins: [Reflux.listenTo(messagesStore,'onMessagesUpdate')],
 
   getInitialState: function() {
-    return getState();
+    return {
+      messages: messagesStore.getMessages().overlayMessages
+    };
+  },
+
+  onMessagesUpdate: function(messages) {
+    var overlayMessages = messages.overlayMessages;
+    this.setState({
+      messages: overlayMessages
+    });
   },
 
   render: function() {
@@ -55,12 +60,8 @@ var Messages = React.createClass({
 
   closeMessage: function(e) {
     e.preventDefault();
-  },
-
-  // Event handler for 'change' events coming from store mixins.
-  _onChange: function() {
-    this.setState(getState());
   }
+
 });
 
 module.exports = Messages;

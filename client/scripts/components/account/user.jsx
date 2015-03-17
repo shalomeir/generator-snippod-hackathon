@@ -7,16 +7,12 @@
 var React = require('react'),
     DocumentTitle = require('react-document-title');
 
-var getState = function() {
-  return {
-  };
-};
 
 var User = React.createClass({
 
-  getInitialState: function() {
-    return getState();
-  },
+  //getInitialState: function() {
+  //  return getState();
+  //},
 
   render: function() {
     var user = this.props.user;

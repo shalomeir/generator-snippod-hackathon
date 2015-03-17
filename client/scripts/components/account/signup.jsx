@@ -2,9 +2,9 @@
 
 var React = require('react'),
     DocumentTitle = require('react-document-title'),
-    userActions = require('../../actions/user');
+    userActions = require('../../actions/userActions');
 
-var SignupComponent = React.createClass({
+var Signup = React.createClass({
 
   render: function() {
     return (
@@ -35,6 +35,7 @@ var SignupComponent = React.createClass({
       /* jshint ignore:end */
     );
   },
+
   handleSubmit: function(e) {
     e.preventDefault();
     var form = e.currentTarget;
@@ -42,4 +43,4 @@ var SignupComponent = React.createClass({
   }
 });
 
-module.exports = SignupComponent;
+module.exports = Signup;

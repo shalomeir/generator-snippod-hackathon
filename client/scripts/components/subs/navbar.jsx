@@ -1,23 +1,20 @@
 'use strict';
 
 var React = require('react'),
-    userStore = require('../../stores/user'),
-    userActions = require('../../actions/user'),
+    Reflux = require('reflux'),
+    userActions = require('../../actions/userActions'),
+    uiActions = require('../../actions/uiActions'),
     Router = require('react-router'),
     { Link } = Router;
 
-var getState = function() {
-  return {
-    user: userStore.get()
-  };
-};
 
 var NavBar = React.createClass({
 
-  mixins: [userStore.mixin],
-
-  getInitialState: function() {
-    return getState();
+  componentDidMount: function() {
+    var loginString = String('/login');
+    if (this.props.path.toLowerCase().trim() === loginString ) {
+      uiActions.showOverlay('login');
+    }
   },
 
   render: function() {
@@ -40,7 +37,7 @@ var NavBar = React.createClass({
       /* jshint ignore:start */
       <ul className="nav-list pull-right">
         <li className="nav-item">
-          <Link to="login">Login</Link>
+          <a onClick={ uiActions.showOverlay.bind(this,'login') }>Sign In</a>
         </li>
         <li className="nav-item">
           <Link to="signup">Create Account</Link>
@@ -66,12 +63,8 @@ var NavBar = React.createClass({
   handleLogout: function(e) {
     e.preventDefault();
     userActions.logout();
-  },
-
-  // Event handler for 'change' events coming from store mixins.
-  _onChange: function() {
-    this.setState(getState());
   }
+
 });
 
 module.exports = NavBar;

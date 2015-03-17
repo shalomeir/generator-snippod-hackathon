@@ -17,7 +17,7 @@ module.exports = {
 
 };
 
-},{"../constants/defaults":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/defaults.js","../constants/messages":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/messages.js","../dispatchers/default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/dispatchers/default.js","object-assign":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/object-assign/index.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/page.js":[function(require,module,exports){
+},{"../constants/defaults":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/defaults.js","../constants/messages":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/messagesStore.js","../dispatchers/default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/dispatchers/default.js","object-assign":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/object-assign/index.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/page.js":[function(require,module,exports){
 'use strict';
 
 var Dispatcher = require('../dispatchers/default');
@@ -36,7 +36,7 @@ module.exports = {
 
 };
 
-},{"../constants/defaults":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/defaults.js","../constants/page":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/page.js","../dispatchers/default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/dispatchers/default.js","object-assign":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/object-assign/index.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/routes.js":[function(require,module,exports){
+},{"../constants/defaults":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/defaults.js","../constants/page":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/pageActions.js","../dispatchers/default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/dispatchers/default.js","object-assign":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/object-assign/index.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/routes.js":[function(require,module,exports){
 'use strict';
 
 var Dispatcher = require('../dispatchers/default');
@@ -57,7 +57,7 @@ module.exports = {
 
 };
 
-},{"../constants/routes":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/routes.js","../dispatchers/default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/dispatchers/default.js","./messages":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/messages.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/user.js":[function(require,module,exports){
+},{"../constants/routes":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/routes.js","../dispatchers/default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/dispatchers/default.js","./messages":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/messagesStore.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/user.js":[function(require,module,exports){
 'use strict';
 
 var Dispatcher = require('../dispatchers/default');
@@ -267,7 +267,7 @@ module.exports = {
 
 };
 
-},{"../constants/defaults":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/defaults.js","../constants/user":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/user.js","../dispatchers/default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/dispatchers/default.js","./messages":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/messages.js","./routes":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/routes.js","cookie":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/cookie/index.js","form-serialize":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/form-serialize/index.js","superagent":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/superagent/lib/client.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/App.jsx":[function(require,module,exports){
+},{"../constants/defaults":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/defaults.js","../constants/user":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/user.js","../dispatchers/default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/dispatchers/default.js","./messages":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/messagesStore.js","./routes":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/routes.js","cookie":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/cookie/index.js","form-serialize":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/form-serialize/index.js","superagent":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/superagent/lib/client.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/App.jsx":[function(require,module,exports){
 'use strict';
 
 var React = require('react'),
@@ -287,15 +287,15 @@ var App = React.createClass({displayName: "App",
   render:function() {
     return (
       /* jshint ignore:start */
-      React.createElement(DocumentTitle, {title: "Snippod Generator Boilerplate"}, 
-        React.createElement("div", {className: "App"}, 
-          React.createElement("div", {className: "main-nav"}, 
+      React.createElement(DocumentTitle, {title: "Snippod Generator Boilerplate"},
+        React.createElement("div", {className: "App"},
+          React.createElement("div", {className: "main-nav"},
             React.createElement(Navbar, React.__spread({},  this.props))
-          ), 
-          React.createElement("div", {className: "messages"}, 
+          ),
+          React.createElement("div", {className: "messages"},
             React.createElement(Messages, {messages: this.state.messages})
-          ), 
-          React.createElement("div", {className: "main-container"}, 
+          ),
+          React.createElement("div", {className: "main-container"},
             React.createElement(RouteHandler, React.__spread({},  this.props))
           )
         )
@@ -319,15 +319,15 @@ var ForgotComponent = React.createClass({displayName: "ForgotComponent",
   render: function() {
     return (
       /* jshint ignore:start */
-      React.createElement(DefaultLayout, null, 
-        React.createElement("h3", null, "Forgot Password"), 
-        React.createElement("form", {method: "post", action: "/forgot", onSubmit: this.handleSubmit}, 
-          React.createElement("p", null, "Enter your email address below and we will send you password reset instructions."), 
+      React.createElement(DefaultLayout, null,
+        React.createElement("h3", null, "Forgot Password"),
+        React.createElement("form", {method: "post", action: "/forgot", onSubmit: this.handleSubmit},
+          React.createElement("p", null, "Enter your email address below and we will send you password reset instructions."),
 
-          React.createElement("p", null, 
-            React.createElement("label", {htmlFor: "email"}, "Email:"), 
+          React.createElement("p", null,
+            React.createElement("label", {htmlFor: "email"}, "Email:"),
             React.createElement("input", {type: "email", name: "email", id: "email", placeholder: "Enter your email", autofocus: "autofocus"})
-          ), 
+          ),
 
           React.createElement("button", null, "Reset Password")
         )
@@ -357,20 +357,20 @@ var LoginComponent = React.createClass({displayName: "LoginComponent",
   render: function() {
     return (
       /* jshint ignore:start */
-      React.createElement(DefaultLayout, null, 
-        React.createElement("h3", null, "Sign in"), 
-        React.createElement("form", {method: "post", action: "/login", onSubmit: this.handleSubmit}, 
-          React.createElement("p", null, 
-            React.createElement("label", {htmlFor: "email"}, "Email:"), 
+      React.createElement(DefaultLayout, null,
+        React.createElement("h3", null, "Sign in"),
+        React.createElement("form", {method: "post", action: "/login", onSubmit: this.handleSubmit},
+          React.createElement("p", null,
+            React.createElement("label", {htmlFor: "email"}, "Email:"),
             React.createElement("input", {type: "text", name: "email", id: "email", placeholder: "Enter your email", autofocus: "autofocus"})
-          ), 
+          ),
 
-          React.createElement("p", null, 
-            React.createElement("label", {htmlFor: "password"}, "Password:"), 
+          React.createElement("p", null,
+            React.createElement("label", {htmlFor: "password"}, "Password:"),
             React.createElement("input", {type: "password", name: "password", id: "password", placeholder: "Password"})
-          ), 
+          ),
 
-          React.createElement("button", null, "Login"), 
+          React.createElement("button", null, "Login"),
           React.createElement("p", null, React.createElement(Link, {url: "/forgot"}, "Forgot your password? "))
         )
       )
@@ -397,18 +397,18 @@ var ResetComponent = React.createClass({displayName: "ResetComponent",
   render: function() {
     return (
       /* jshint ignore:start */
-      React.createElement(DefaultLayout, null, 
-        React.createElement("h3", null, "Reset Password"), 
-        React.createElement("form", {method: "post", onSubmit: this.handleSubmit}, 
-          React.createElement("p", null, 
-            React.createElement("label", {htmlFor: "password"}, "New Password"), 
+      React.createElement(DefaultLayout, null,
+        React.createElement("h3", null, "Reset Password"),
+        React.createElement("form", {method: "post", onSubmit: this.handleSubmit},
+          React.createElement("p", null,
+            React.createElement("label", {htmlFor: "password"}, "New Password"),
             React.createElement("input", {type: "password", name: "password", defaultValue: "", placeholder: "New password", autofocus: "autofocus"})
-          ), 
+          ),
 
-          React.createElement("p", null, 
-            React.createElement("label", {htmlFor: "confirm"}, "Confirm Password"), 
+          React.createElement("p", null,
+            React.createElement("label", {htmlFor: "confirm"}, "Confirm Password"),
             React.createElement("input", {type: "password", name: "confirm", defaultValue: "", placeholder: "Confirm password"})
-          ), 
+          ),
 
           React.createElement("button", null, "Change Password")
         )
@@ -449,51 +449,51 @@ var SettingsComponent = React.createClass({displayName: "SettingsComponent",
 
     return (
       /* jshint ignore:start */
-      React.createElement(DefaultLayout, null, 
-        React.createElement("h3", null, "Profile Information"), 
+      React.createElement(DefaultLayout, null,
+        React.createElement("h3", null, "Profile Information"),
 
-        React.createElement("form", {id: "profile-form", action: "/user?_method=PUT", method: "post", onSubmit: this.handleSettings}, 
+        React.createElement("form", {id: "profile-form", action: "/user?_method=PUT", method: "post", onSubmit: this.handleSettings},
 
-          React.createElement("p", null, 
-            React.createElement("label", {htmlFor: "email"}, "Email:"), 
+          React.createElement("p", null,
+            React.createElement("label", {htmlFor: "email"}, "Email:"),
             React.createElement("input", {type: "text", name: "email", id: "email", defaultValue: user.email})
-          ), 
+          ),
 
-          React.createElement("p", null, 
-            React.createElement("label", {htmlFor: "firstName"}, "First Name:"), 
+          React.createElement("p", null,
+            React.createElement("label", {htmlFor: "firstName"}, "First Name:"),
             React.createElement("input", {type: "text", name: "firstName", id: "firstName", defaultValue: user.firstName})
-          ), 
+          ),
 
-          React.createElement("p", null, 
-            React.createElement("label", {htmlFor: "lastName"}, "Last Name:"), 
+          React.createElement("p", null,
+            React.createElement("label", {htmlFor: "lastName"}, "Last Name:"),
             React.createElement("input", {type: "text", name: "lastName", id: "lastName", defaultValue: user.lastName})
-          ), 
+          ),
 
           React.createElement("button", null, "Update Profile")
-        ), 
+        ),
 
-        React.createElement("h3", null, "Change Password"), 
+        React.createElement("h3", null, "Change Password"),
 
-        React.createElement("form", {id: "password-form", action: "/user/password?_method=PUT", method: "post", onSubmit: this.handlePassword}, 
+        React.createElement("form", {id: "password-form", action: "/user/password?_method=PUT", method: "post", onSubmit: this.handlePassword},
 
-          React.createElement("p", null, 
-            React.createElement("label", {htmlFor: "password"}, "New Password:"), 
+          React.createElement("p", null,
+            React.createElement("label", {htmlFor: "password"}, "New Password:"),
             React.createElement("input", {type: "password", name: "password", id: "password", defaultValue: ""})
-          ), 
+          ),
 
-          React.createElement("p", null, 
-            React.createElement("label", {htmlFor: "confirmPassword"}, "Confirm Password:"), 
+          React.createElement("p", null,
+            React.createElement("label", {htmlFor: "confirmPassword"}, "Confirm Password:"),
             React.createElement("input", {type: "password", name: "confirmPassword", id: "confirmPassword", defaultValue: ""})
-          ), 
+          ),
 
           React.createElement("button", null, "Change Password")
-        ), 
+        ),
 
-        React.createElement("h3", null, "Delete Account"), 
+        React.createElement("h3", null, "Delete Account"),
 
-        React.createElement("p", null, "You can delete your account, but keep in mind this action is irreversible."), 
+        React.createElement("p", null, "You can delete your account, but keep in mind this action is irreversible."),
 
-        React.createElement("form", {id: "delete-form", action: "/user?_method=DELETE", method: "post", onSubmit: this.handleDestroy}, 
+        React.createElement("form", {id: "delete-form", action: "/user?_method=DELETE", method: "post", onSubmit: this.handleDestroy},
           React.createElement("button", null, "Delete my account")
         )
       )
@@ -534,23 +534,23 @@ var SignupComponent = React.createClass({displayName: "SignupComponent",
   render: function() {
     return (
       /* jshint ignore:start */
-      React.createElement(DefaultLayout, null, 
-        React.createElement("h3", null, "Sign up"), 
-        React.createElement("form", {id: "signup-form", method: "post", action: "/user", onSubmit: this.handleSubmit}, 
-          React.createElement("p", null, 
-            React.createElement("label", {htmlFor: "email"}, "Email:"), 
+      React.createElement(DefaultLayout, null,
+        React.createElement("h3", null, "Sign up"),
+        React.createElement("form", {id: "signup-form", method: "post", action: "/user", onSubmit: this.handleSubmit},
+          React.createElement("p", null,
+            React.createElement("label", {htmlFor: "email"}, "Email:"),
             React.createElement("input", {type: "text", name: "email", id: "email", placeholder: "Email"})
-          ), 
+          ),
 
-          React.createElement("p", null, 
-            React.createElement("label", {htmlFor: "password"}, "Password:"), 
+          React.createElement("p", null,
+            React.createElement("label", {htmlFor: "password"}, "Password:"),
             React.createElement("input", {type: "password", name: "password", id: "password", placeholder: "Password"})
-          ), 
+          ),
 
-          React.createElement("p", null, 
-            React.createElement("label", {htmlFor: "confirmPassword"}, "Confirm Password:"), 
+          React.createElement("p", null,
+            React.createElement("label", {htmlFor: "confirmPassword"}, "Confirm Password:"),
             React.createElement("input", {type: "password", name: "confirmPassword", id: "confirmPassword", placeholder: "Confirm Password"})
-          ), 
+          ),
 
           React.createElement("button", null, "Signup")
         )
@@ -579,22 +579,22 @@ var IndexComponent = React.createClass({displayName: "IndexComponent",
   render: function () {
     return (
       /* jshint ignore:start */
-      React.createElement(DefaultLayout, null, 
-        React.createElement("div", {className: "main-container"}, 
-          React.createElement("div", {className: "yeogurt-info"}, 
-            React.createElement("h1", null, "Welcome to Yeogurt!"), 
-            React.createElement("p", null, 
+      React.createElement(DefaultLayout, null,
+        React.createElement("div", {className: "main-container"},
+          React.createElement("div", {className: "yeogurt-info"},
+            React.createElement("h1", null, "Welcome to Yeogurt!"),
+            React.createElement("p", null,
               "Take a look at the ", React.createElement("a", {href: "https://github.com/larsonjj/generator-yeogurt#yeogurt-generator"}, "documentation"), " and start mixing up something awesome."
-            ), 
-            React.createElement("p", null, 
+            ),
+            React.createElement("p", null,
               React.createElement("img", {src: "/images/yeogurt-swirl.png", width: "75px", className: "logo"})
-            ), 
-            React.createElement("p", {className: "links"}, 
-              React.createElement("a", {href: "/docs/styleguide/index.html"}, "Styleguide"), 
+            ),
+            React.createElement("p", {className: "links"},
+              React.createElement("a", {href: "/docs/styleguide/index.html"}, "Styleguide"),
               React.createElement("a", {href: "/docs/api/index.html"}, "API")
             )
           )
-        ), 
+        ),
         React.createElement("code", {className: "version"}, "v0.14.2")
       )
       /* jshint ignore:end */
@@ -632,16 +632,16 @@ var DefaultComponent = React.createClass({displayName: "DefaultComponent",
   render: function() {
     return (
       /* jshint ignore:start */
-      React.createElement("div", null, 
-        React.createElement("div", {className: "main-nav"}, 
+      React.createElement("div", null,
+        React.createElement("div", {className: "main-nav"},
           React.createElement(Navbar, {user: this.state.user})
-        ), 
-        React.createElement("div", {className: "default"}, 
-          React.createElement("div", {className: "main-container"}, 
-            React.createElement("div", {className: "messages"}, 
+        ),
+        React.createElement("div", {className: "default"},
+          React.createElement("div", {className: "main-container"},
+            React.createElement("div", {className: "messages"},
               React.createElement(Messages, {messages: this.state.messages})
-            ), 
-            React.createElement("div", {className: "content"}, 
+            ),
+            React.createElement("div", {className: "content"},
               this.props.children
             )
           )
@@ -658,7 +658,7 @@ var DefaultComponent = React.createClass({displayName: "DefaultComponent",
 
 module.exports = DefaultComponent;
 
-},{"../../stores/page":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/page.js","../../stores/user":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/user.js","../modules/messages.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/modules/messages.jsx","../modules/navbar.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/modules/navbar.jsx","react":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react/react.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/modules/link.jsx":[function(require,module,exports){
+},{"../../stores/page":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/pageActions.js","../../stores/user":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/user.js","../modules/messages.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/modules/messages.jsx","../modules/navbar.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/modules/navbar.jsx","react":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react/react.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/modules/link.jsx":[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -735,9 +735,9 @@ var MessagesComponent = React.createClass({displayName: "MessagesComponent",
 
     return (
       /* jshint ignore:start */
-      React.createElement("div", null, 
-        errors, 
-        info, 
+      React.createElement("div", null,
+        errors,
+        info,
         success
       )
       /* jshint ignore:end */
@@ -751,7 +751,7 @@ var MessagesComponent = React.createClass({displayName: "MessagesComponent",
 
 module.exports = MessagesComponent;
 
-},{"../../stores/messages":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/messages.js","react":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react/react.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/modules/navbar.jsx":[function(require,module,exports){
+},{"../../stores/messages":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/messagesStore.js","react":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react/react.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/modules/navbar.jsx":[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -774,25 +774,25 @@ var NavbarComponent = React.createClass({displayName: "NavbarComponent",
     var user = this.props.user;
     var navLinks = user.loggedIn ? (
       /* jshint ignore:start */
-      React.createElement("ul", {className: "nav-list pull-right"}, 
-        React.createElement("li", {className: "nav-item"}, 
+      React.createElement("ul", {className: "nav-list pull-right"},
+        React.createElement("li", {className: "nav-item"},
           "Hello ", user.firstName ? user.firstName : user.email
-        ), 
-        React.createElement("li", {className: "nav-item"}, 
+        ),
+        React.createElement("li", {className: "nav-item"},
           React.createElement(Link, {url: "/settings"}, "My Account")
-        ), 
-        React.createElement("li", {className: "nav-item"}, 
+        ),
+        React.createElement("li", {className: "nav-item"},
           React.createElement(Link, {url: "/logout", onClick: this.handleLogout}, "Logout")
         )
       )
       /* jshint ignore:end */
     ) : (
       /* jshint ignore:start */
-      React.createElement("ul", {className: "nav-list pull-right"}, 
-        React.createElement("li", {className: "nav-item"}, 
+      React.createElement("ul", {className: "nav-list pull-right"},
+        React.createElement("li", {className: "nav-item"},
           React.createElement(Link, {url: "/login"}, "Login")
-        ), 
-        React.createElement("li", {className: "nav-item"}, 
+        ),
+        React.createElement("li", {className: "nav-item"},
           React.createElement(Link, {url: "/signup"}, "Create Account")
         )
       )
@@ -801,12 +801,12 @@ var NavbarComponent = React.createClass({displayName: "NavbarComponent",
 
     return (
       /* jshint ignore:start */
-      React.createElement("div", null, 
-        React.createElement("div", {className: "navbar"}, 
-          React.createElement("div", {className: "nav"}, 
-            React.createElement("ul", {className: "nav-list pull-left"}, 
+      React.createElement("div", null,
+        React.createElement("div", {className: "navbar"},
+          React.createElement("div", {className: "nav"},
+            React.createElement("ul", {className: "nav-list pull-left"},
               React.createElement("li", {className: "nav-item"}, React.createElement(Link, {url: "/"}, "Home"))
-            ), 
+            ),
             navLinks
           )
         )
@@ -956,18 +956,18 @@ var React = require('react'),
     Settings = require('./components/account/settings.jsx'),
     User = require('./components/account/user.jsx'),
     Snip = require('./components/snip/snip.jsx'),
-    Topic = require('./components/topic/topic.jsx');
+    Topic = require('./components/topic/Topic.jsx');
 
 var routes = (
   /* jshint ignore:start */
-  React.createElement(Route, {name: "app", path: "/", handler: App}, 
-    React.createElement(DefaultRoute, {name: "root", handler: Topic}), 
-    React.createElement(Route, {name: "login", path: "/login", handler: Login}), 
-    React.createElement(Route, {name: "forgot", path: "/login/forgot", handler: Forgot}), 
-    React.createElement(Route, {name: "signup", path: "/signup", handler: SignUp}), 
-    React.createElement(Route, {name: "settings", path: "/settings", handler: Settings}), 
-    React.createElement(Route, {name: "user", path: "/user", handler: User}), 
-    React.createElement(Route, {name: "snip", path: "/snip/:sid", handler: Snip}), 
+  React.createElement(Route, {name: "app", path: "/", handler: App},
+    React.createElement(DefaultRoute, {name: "root", handler: Topic}),
+    React.createElement(Route, {name: "login", path: "/login", handler: Login}),
+    React.createElement(Route, {name: "forgot", path: "/login/forgot", handler: Forgot}),
+    React.createElement(Route, {name: "signup", path: "/signup", handler: SignUp}),
+    React.createElement(Route, {name: "settings", path: "/settings", handler: Settings}),
+    React.createElement(Route, {name: "user", path: "/user", handler: User}),
+    React.createElement(Route, {name: "snip", path: "/snip/:sid", handler: Snip}),
     React.createElement(Route, {name: "topic", path: "/:topic", handler: Topic})
   )
   /* jshint ignore:end */
@@ -975,7 +975,7 @@ var routes = (
 
 module.exports = routes;
 
-},{"./components/App.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/App.jsx","./components/account/forgot.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/account/forgot.jsx","./components/account/login.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/account/login.jsx","./components/account/settings.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/account/settings.jsx","./components/account/signup.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/account/signup.jsx","./components/account/user.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/account/user.jsx","./components/snip/snip.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/snip/snip.jsx","./components/topic/topic.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/topic/topic.jsx","react":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react/react.js","react-router":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react-router/lib/index.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/default.js":[function(require,module,exports){
+},{"./components/App.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/App.jsx","./components/account/forgot.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/account/forgot.jsx","./components/account/login.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/account/login.jsx","./components/account/settings.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/account/settings.jsx","./components/account/signup.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/account/signup.jsx","./components/account/user.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/account/user.jsx","./components/snip/snip.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/snip/snip.jsx","./components/topic/topic.jsx":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/components/topic/Topic.jsx","react":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react/react.js","react-router":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react-router/lib/index.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/default.js":[function(require,module,exports){
 'use strict';
 
 var EventEmitter = require('events').EventEmitter;
@@ -1070,7 +1070,7 @@ MessagesStore.dispatcherToken = Dispatcher.register(function(payload) {
 
 module.exports = MessagesStore;
 
-},{"../constants/defaults":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/defaults.js","../constants/messages":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/messages.js","../dispatchers/default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/dispatchers/default.js","./default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/default.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/page.js":[function(require,module,exports){
+},{"../constants/defaults":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/defaults.js","../constants/messages":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/messagesStore.js","../dispatchers/default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/dispatchers/default.js","./default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/default.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/page.js":[function(require,module,exports){
 'use strict';
 
 var Store = require('./default');
@@ -1103,7 +1103,7 @@ PageStore.dispatcherToken = Dispatcher.register(function(payload) {
 
 module.exports = PageStore;
 
-},{"../constants/defaults":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/defaults.js","../constants/page":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/page.js","../dispatchers/default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/dispatchers/default.js","./default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/default.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/user.js":[function(require,module,exports){
+},{"../constants/defaults":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/defaults.js","../constants/page":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/constants/pageActions.js","../dispatchers/default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/dispatchers/default.js","./default":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/default.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/user.js":[function(require,module,exports){
 'use strict';
 
 var Store = require('./default');
@@ -3162,10 +3162,10 @@ var PropTypes = require("./PropTypes");
  *     mixins: [ Router.State ],
  *     render: function () {
  *       var className = this.props.className;
- *   
+ *
  *       if (this.isActive('about'))
  *         className += ' is-active';
- *   
+ *
  *       return React.DOM.a({ className: className }, this.props.children);
  *     }
  *   });
@@ -3698,7 +3698,7 @@ var RouteHandler = require("./RouteHandler");
  *       <Route name="about" handler={About}/>
  *     </Route>
  *   ];
- *   
+ *
  *   Router.run(routes, function (Handler) {
  *     React.render(<Handler/>, document.body);
  *   });
@@ -4682,9 +4682,9 @@ var createRouter = require("./createRouter");
  *   Router.run(routes, function (Handler) {
  *     React.render(<Handler/>, document.body);
  *   });
- * 
+ *
  * Using HTML5 history and a custom "cursor" prop:
- * 
+ *
  *   Router.run(routes, Router.HistoryLocation, function (Handler) {
  *     React.render(<Handler cursor={cursor}/>, document.body);
  *   });
@@ -25432,8 +25432,8 @@ function Response(req, options) {
   options = options || {};
   this.req = req;
   this.xhr = this.req.xhr;
-  this.text = this.req.method !='HEAD' 
-     ? this.xhr.responseText 
+  this.text = this.req.method !='HEAD'
+     ? this.xhr.responseText
      : null;
   this.setStatusProperties(this.xhr.status);
   this.header = this.headers = parseHeader(this.xhr.getAllResponseHeaders());
@@ -25594,7 +25594,7 @@ function Request(method, url) {
     var res = null;
 
     try {
-      res = new Response(self); 
+      res = new Response(self);
     } catch(e) {
       err = new Error('Parser is unable to parse the response');
       err.parse = true;
@@ -26396,7 +26396,7 @@ Emitter.prototype.hasListeners = function(event){
  * TODO: combatible error handling?
  */
 
-module.exports = function(arr, fn, initial){  
+module.exports = function(arr, fn, initial){
   var idx = 0;
   var len = arr.length;
   var curr = arguments.length == 3
@@ -26406,7 +26406,7 @@ module.exports = function(arr, fn, initial){
   while (idx < len) {
     curr = fn.call(null, curr, arr[idx], ++idx, arr);
   }
-  
+
   return curr;
 };
 },{}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/test/spec/actions/messages.spec.js":[function(require,module,exports){
@@ -26435,7 +26435,7 @@ describe('Messages Actions', function() {
 
 });
 
-},{"../../../client/scripts/actions/messages":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/messages.js","react/addons":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react/addons.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/test/spec/actions/page.spec.js":[function(require,module,exports){
+},{"../../../client/scripts/actions/messages":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/messagesStore.js","react/addons":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react/addons.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/test/spec/actions/page.spec.js":[function(require,module,exports){
 /**
 *   Page Actions Spec Test
 */
@@ -26461,7 +26461,7 @@ describe('Page Actions', function() {
 
 });
 
-},{"../../../client/scripts/actions/page":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/page.js","react/addons":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react/addons.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/test/spec/actions/routes.spec.js":[function(require,module,exports){
+},{"../../../client/scripts/actions/page":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/actions/pageActions.js","react/addons":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react/addons.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/test/spec/actions/routes.spec.js":[function(require,module,exports){
 /**
 *   Router Actions Spec Test
 */
@@ -26877,7 +26877,7 @@ describe('Messages Store', function() {
 
 });
 
-},{"../../../client/scripts/stores/messages":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/messages.js","react/addons":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react/addons.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/test/spec/stores/page.spec.js":[function(require,module,exports){
+},{"../../../client/scripts/stores/messages":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/messagesStore.js","react/addons":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react/addons.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/test/spec/stores/page.spec.js":[function(require,module,exports){
 /**
 *   Page Store Spec Test
 */
@@ -26903,7 +26903,7 @@ describe('Page Store', function() {
 
 });
 
-},{"../../../client/scripts/stores/page":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/page.js","react/addons":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react/addons.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/test/spec/stores/user.spec.js":[function(require,module,exports){
+},{"../../../client/scripts/stores/page":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/client/scripts/stores/pageActions.js","react/addons":"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/node_modules/react/addons.js"}],"/Users/shalomeir/IdeaProjects/Snippod/generator-snippod-hackathon/test/spec/stores/user.spec.js":[function(require,module,exports){
 /**
 *   User Store Spec Test
 */

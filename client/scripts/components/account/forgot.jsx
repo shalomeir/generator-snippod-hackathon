@@ -2,12 +2,13 @@
 
 var React = require('react'),
     DocumentTitle = require('react-document-title'),
-    userActions = require('../../actions/user'),
+    userActions = require('../../actions/userActions'),
     Router = require('react-router'),
     { Link } = Router;
 
 
 var ForgotComponent = React.createClass({
+
   render: function() {
     return (
       /* jshint ignore:start */
@@ -29,6 +30,7 @@ var ForgotComponent = React.createClass({
       /* jshint ignore:end */
     );
   },
+
   handleSubmit: function(e) {
     e.preventDefault();
     var form = e.currentTarget;
