@@ -11,9 +11,11 @@ var React = require('react'),
 var NavBar = React.createClass({
 
   componentDidMount: function() {
-    var loginString = String('/login');
-    if (this.props.path.toLowerCase().trim() === loginString ) {
+    var pathString = this.props.path.toLowerCase().trim();
+    if (pathString === String('/login')) {
       uiActions.showOverlay('login');
+    } else if (pathString === String('/register')) {
+      uiActions.showOverlay('register');
     }
   },
 
@@ -40,7 +42,7 @@ var NavBar = React.createClass({
           <a onClick={ uiActions.showOverlay.bind(this,'login') }>Sign In</a>
         </li>
         <li className="nav-item">
-          <Link to="signup">Create Account</Link>
+          <a onClick={ uiActions.showOverlay.bind(this,'register') }>Register</a>
         </li>
       </ul>
       /* jshint ignore:end */

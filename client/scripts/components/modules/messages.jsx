@@ -20,9 +20,8 @@ var Messages = React.createClass({
   },
 
   onMessagesUpdate: function(messages) {
-    var overlayMessages = messages.overlayMessages;
     this.setState({
-      messages: overlayMessages
+      messages: messages
     });
   },
 

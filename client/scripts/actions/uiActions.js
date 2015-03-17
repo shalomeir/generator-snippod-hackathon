@@ -3,13 +3,19 @@
  */
 'use strict';
 
-var Reflux = require('reflux');
+var Reflux = require('reflux'),
+    router = require('../router');
 
 var uiActions = Reflux.createActions({
   //from component to component directly.
   'showOverlay':{},
-  'hideOverlay':{}
+  'hideOverlay':{},
 });
+
+
+/* UI Actions
+ ===============================*/
+
 
 module.exports = uiActions;
 

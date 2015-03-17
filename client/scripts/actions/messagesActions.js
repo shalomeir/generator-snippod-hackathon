@@ -6,7 +6,7 @@ var Reflux = require('reflux'),
 var messagesActions = Reflux.createActions({
   //by pass to store
   'setMessages':{},
-  'loginError':{}
+  'setError':{}
 });
 
 module.exports = messagesActions;

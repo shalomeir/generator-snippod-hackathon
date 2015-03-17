@@ -10,17 +10,17 @@ var React = require('react'),
     // components
     Spinner = require('../modules/Spinner.jsx'),
     // stores
-    messagesStore = require('../../stores/messagesStore'),
     userStore = require('../../stores/userStore'),
     // actions
-    userActions = require('../../actions/userActions');
+    userActions = require('../../actions/userActions'),
+    messagesActions = require('../../actions/messagesActions');
 
 
 var Login = React.createClass({
 
   mixins: [
     Reflux.listenTo(userStore, 'resetForm'),
-    Reflux.listenTo(messagesStore, 'onErrorMessage')
+    Reflux.listenTo(messagesActions.setError, 'onErrorMessage')
   ],
 
   getInitialState: function() {
@@ -41,8 +41,14 @@ var Login = React.createClass({
 
   onErrorMessage: function(errorMessage) {
     this.refs.submit.getDOMNode().disabled = false;
+    var errorSentence;
+    if (errorMessage.info) {
+      errorSentence = errorMessage.info[0].msg;
+    } else {
+      errorSentence = null;
+    }
     this.setState({
-      error: errorMessage,
+      error: errorSentence,
       submitted: false
     });
   },
@@ -80,7 +86,7 @@ var Login = React.createClass({
         <form method="post" action="/login" onSubmit={ this.login } className="login-form text-left">
           <h1>Login</h1>
           <label htmlFor="email">Email</label><br />
-          <input type="email" name="email" placeholder="Enter your email" autofocus="autofocus" id="email" ref="email"/><br />
+          <input autofocus="autofocus" type="email" name="email" placeholder="Enter your email" id="email" ref="email"/><br />
           <label htmlFor="password">Password</label><br />
           <input type="password" name="password" placeholder="Password" id="password" ref="password"/><br />
           <button type="submit" className="button button-primary" ref="submit">
@@ -92,6 +98,7 @@ var Login = React.createClass({
       /* jshint ignore:end */
     );
   }
+
 });
 
 module.exports = Login;

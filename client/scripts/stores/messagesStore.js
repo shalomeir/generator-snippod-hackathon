@@ -22,14 +22,6 @@ var MessagesStore = Reflux.createStore({
   setMessages: function(messages) {
     this.messages = messages;
     this.trigger(this.messages);
-  },
-
-  loginError: function(errors) {
-    if(errors.info[0].msg) {
-      this.trigger(errors.info[0].msg);
-    } else {
-      this.trigger();
-    }
   }
 
 });

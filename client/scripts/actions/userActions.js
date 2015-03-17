@@ -9,12 +9,11 @@ var Reflux = require('reflux'),
 
 var messagesActions = require('./messagesActions');
 
-
 var userActions = Reflux.createActions({
   //from component
   'login':{},
   'logout':{},
-  'signup':{},
+  'register':{},
   'forgot':{},
   'reset':{},
   'updateSettings':{},
@@ -67,7 +66,9 @@ var _postForm = function(form, callback){
         if (options.updateUser) {
           userData = res.body.user;
           userData.loggedIn = true;
-
+          if (options.successUrl) {
+            userActions.setUser(userData,options.successUrl);
+          }
           userActions.setUser(userData);
         }
         // If user needs to be destroyed
@@ -78,10 +79,9 @@ var _postForm = function(form, callback){
         if (callback && callback.success) {
           callback.success(res);
         }
-        if (options.successUrl) {
-          router.transitionTo(options.successUrl);
-        }
+
         messagesActions.setMessages(res.body);
+        messagesActions.setError({});
       }
       else {
         if (callback && callback.error) {
@@ -90,10 +90,9 @@ var _postForm = function(form, callback){
         if (options.errorUrl) {
           router.transitionTo(options.errorUrl);
         }
-        messagesActions.loginError(res.body);
+        messagesActions.setError(res.body);
       }
 
-      // Show login error messages
       if (callback && callback.complete) {
         callback.complete(res);
       }
@@ -162,11 +161,10 @@ userActions.logout.listen(function() {
   router.transitionTo('/');
 });
 
-userActions.signup.listen(function(form, callback) {
+userActions.register.listen(function(form, callback) {
   var cb = callback || function() {};
   cb.options = {
-    successUrl: '/',
-    errorUrl: '/signup',
+    successUrl: '/settings',
     setToken: true,
     updateUser: true
   };

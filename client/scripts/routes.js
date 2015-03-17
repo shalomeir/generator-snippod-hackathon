@@ -4,8 +4,8 @@ var React = require('react'),
     { Route, DefaultRoute } = require('react-router'),
     App = require('./components/App.jsx'),
     //Login = require('./components/account/login.jsx'),
+    //SignUp = require('./components/account/signup.jsx'),
     Forgot = require('./components/account/forgot.jsx'),
-    SignUp = require('./components/account/signup.jsx'),
     Settings = require('./components/account/settings.jsx'),
     User = require('./components/account/user.jsx'),
     Snip = require('./components/snip/snip.jsx'),
@@ -16,8 +16,8 @@ var routes = (
   <Route name='app' path='/' handler={App}>
     <DefaultRoute handler={Topic} />
     <Route name='login' path='/login' handler={Topic} />
+    <Route name='register' path='/register' handler={Topic} />
     <Route name='forgot' path='/login/forgot' handler={Forgot} />
-    <Route name='signup' path='/signup' handler={SignUp} />
     <Route name='settings' path='/settings' handler={Settings} />
     <Route name='user' path='/user' handler={User} />
     <Route name='snip' path='/snip/:sid' handler={Snip} />

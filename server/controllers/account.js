@@ -68,11 +68,11 @@ var postLogin = function(req, res, next) {
 };
 
 /**
- * GET /signup
- * Signup page.
+ * GET /register
+ * register page.
  */
 
-var signup = function(req, res) {
+var register = function(req, res) {
   // Render index.html to allow application to handle routing
   res.sendFile(path.join(settings.staticAssets, '/index.html'), { root: settings.root });
 };
@@ -260,8 +260,8 @@ var postForgot = function(req, res, next) {
       // Create email message
       var mailOptions = {
         to: user.email,
-        from: 'yeogurt@yoururl.com',
-        subject: 'Reset your password on Yeogurt',
+        from: 'admin@test.com',
+        subject: 'Reset your password on boilerplate',
         text: 'You are receiving this email because you (or someone else) have requested the reset of the password for your account.\n\n' +
           'Please click on the following link, or paste this into your browser to complete the process:\n\n' +
           'http://' + req.headers.host + '/reset/' + token + '\n\n' +
@@ -297,7 +297,7 @@ var settingsPage = function(req, res) {
 module.exports = {
   login: login,
   postLogin: postLogin,
-  signup: signup,
+  register: register,
   postReset: postReset,
   reset: reset,
   forgot: forgot,
