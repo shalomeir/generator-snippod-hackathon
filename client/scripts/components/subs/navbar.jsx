@@ -23,40 +23,38 @@ var NavBar = React.createClass({
     var user = this.props.user;
     var navLinks = user.loggedIn ? (
       /* jshint ignore:start */
-      <ul className="nav-list pull-right">
-        <li className="nav-item">
+      <div className="nav-list float-right">
+        <span className="nav-item">
           Hello <Link to="user">{user.firstName ? user.firstName : user.email}</Link>
-        </li>
-        <li className="nav-item">
+        </span>
+        <span className="nav-item">
           <Link to="settings">My Account</Link>
-        </li>
-        <li className="nav-item">
+        </span>
+        <span className="nav-item">
           <Link to="/logout" onClick={this.handleLogout}>Logout</Link>
-        </li>
-      </ul>
+        </span>
+      </div>
       /* jshint ignore:end */
     ) : (
       /* jshint ignore:start */
-      <ul className="nav-list pull-right">
-        <li className="nav-item">
+      <div className="nav-list float-right">
+        <span className="nav-item">
           <a onClick={ uiActions.showOverlay.bind(this,'login') }>Sign In</a>
-        </li>
-        <li className="nav-item">
+        </span>
+        <span className="nav-item">
           <a onClick={ uiActions.showOverlay.bind(this,'register') }>Register</a>
-        </li>
-      </ul>
+        </span>
+      </div>
       /* jshint ignore:end */
     );
 
     return (
       /* jshint ignore:start */
       <div className="navbar">
-        <div className="nav">
-          <ul className="nav-list pull-left">
-            <li className="nav-item"><Link to="app">Home</Link></li>
-          </ul>
-          {navLinks}
+        <div className="nav-list float-left">
+          <div className="menu-title"><Link to="app">Snippod's Home</Link></div>
         </div>
+        {navLinks}
       </div>
       /* jshint ignore:end */
     );

@@ -17,7 +17,7 @@ var Settings = React.createClass({
     return (
       /* jshint ignore:start */
       <DocumentTitle title='Settings page'>
-        <div className="settings">
+        <div className="settings content full-width">
 
           <h3>Profile Information</h3>
 

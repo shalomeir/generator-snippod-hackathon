@@ -92,10 +92,14 @@ var App = React.createClass({
     return (
       /* jshint ignore:start */
       <DocumentTitle title='App Main'>
-        <div className='App'>
-          <NavBar {...this.props} user={user} />
-          <Messages />
-          <RouteHandler {...this.props} user={user} />
+        <div className='App wrapper full-height' id='app'>
+          <header className='header'>
+            <NavBar {...this.props} user={user} />
+          </header>
+          <main id='content' className='full-height inner'>
+            <Messages />
+            <RouteHandler {...this.props} user={user} />
+          </main>
           <div className={ overlayCx } ref="overlay">{ overlayContent }</div>
         </div>
       </DocumentTitle>
