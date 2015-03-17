@@ -85,6 +85,7 @@
     "rimraf": "~2.2.8",
     "time-grunt": "0.2.10",
     "underscore.string": "~2.3.3",
+    "moment": "^2.8.4",
     "reflux": "~0.2.5"
   },
   "scripts": {

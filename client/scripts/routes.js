@@ -8,7 +8,6 @@ var React = require('react'),
     Forgot = require('./components/account/forgot.jsx'),
     Settings = require('./components/account/settings.jsx'),
     User = require('./components/account/user.jsx'),
-    Snip = require('./components/snip/snip.jsx'),
     Topic = require('./components/topic/Topic.jsx');
 
 var routes = (
@@ -20,7 +19,6 @@ var routes = (
     <Route name='forgot' path='/login/forgot' handler={Forgot} />
     <Route name='settings' path='/settings' handler={Settings} />
     <Route name='user' path='/user' handler={User} />
-    <Route name='snip' path='/snip/:sid' handler={Snip} />
     <Route name='topic' path='/:topic' handler={Topic} />
   </Route>
   /* jshint ignore:end */

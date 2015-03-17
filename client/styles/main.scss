@@ -18,7 +18,7 @@ $error: #d00;
 
 $text: $dark;
 $header: $color1;
-$panel: lighten($color1, 10%);
+$panel: lighten($color1, 15%);
 $link: $color1;
 $button-text: #fff;
 $button: $color1;
@@ -514,6 +514,17 @@ textarea {
     }
 }
 
+.main-info {
+  z-index: -1;
+  transition: transform 0.3s;
+  padding: $medium;
+  background: $panel;
+  color: #fff;
+  a { color: #ff6166; }
+  text-align: center;
+
+}
+
 
 
 /* Posts
@@ -767,41 +778,15 @@ textarea {
   margin-top: 15px;
 }
 
-.links a {
-  color: white;
-  margin-right: 5px;
-  margin-top: 20px;
-  border-radius: 4px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  background: #ed7c6c;
-  display: inline-block;
-  zoom: 1;
-  line-height: normal;
-  white-space: nowrap;
-  vertical-align: baseline;
-  text-align: center;
-  cursor: pointer;
-  font-size: 100%;
-  padding: .5em 1em;
-  text-decoration: none;
-}
-
-.main-container {
-  clear: both;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .error {
-  color: #c00;
+  color: #a80000;
 }
 
 .info {
-  color: #5280e4;
+  color: #38579b;
 }
 
 .success {
-  color: #58e44e;
+  color: #1d741d;
 }
 

@@ -16,7 +16,12 @@ var Defaults = {
     loggedIn: false,
     firstName: 'John',
     lastName: 'Doe',
-    username: null
+    username: null,
+    uid:'',
+    profile: {
+      username: '',
+      upvoted: {}
+    }
   },
 
   messages: {

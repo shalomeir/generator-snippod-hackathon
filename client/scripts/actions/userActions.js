@@ -5,6 +5,7 @@ var Reflux = require('reflux'),
     serialize = require('form-serialize'),
     cookie = require('cookie'),
     router = require('../router'),
+    { getToken, setToken } = require('../utils/tokenControl'),
     userDefaults = require('../constants/defaults').user;
 
 var messagesActions = require('./messagesActions');
@@ -27,23 +28,10 @@ var userActions = Reflux.createActions({
 
 /* Auth Method
  ===============================*/
-var _getToken = function() {
-  var cookies = cookie.parse(document.cookie);
-
-  return cookies.token;
-};
-
-var _setToken = function(token, duration) {
-  var today = new Date();
-  // Set expire date for cookie for some time into the future (days)
-  var endDate = new Date(today.getTime() + (duration * 1000 * 60 * 60 * 24));
-  document.cookie = cookie.serialize('token', token, {expires: endDate});
-};
-
 var _postForm = function(form, callback){
   var postData = serialize(form);
   var postUrl = form.getAttribute('action') || window.location.pathname;
-  var token = _getToken();
+  var token = getToken();
   var options = callback.options || {};
 
   request
@@ -60,12 +48,15 @@ var _postForm = function(form, callback){
         // If auth token needs to be stored
         if (options.setToken) {
           // Store token in cookie that expires in a week
-          _setToken(res.body.token, 7);
+          setToken(res.body.token, 7);
         }
         // If user needs to be updated
         if (options.updateUser) {
           userData = res.body.user;
           userData.loggedIn = true;
+          userData.uid = userData._id;
+          userData.username = userData.firstName+' '+userData.lastName;
+          userData.profile = { username: userData.username };
           if (options.successUrl) {
             userActions.setUser(userData,options.successUrl);
           }
@@ -100,42 +91,42 @@ var _postForm = function(form, callback){
 
 };
 
-var isAuthenticated = function(callback) {
-  var self = this;
-  var token = _getToken();
-  request
-    .get('/user')
-    .type('json')
-    .set({
-      'authorization': 'Bearer ' + token
-    })
-    .end(function(res) {
-      if (res.ok) {
-        if (res.body && res.body.user) {
-          var userData = res.body.user;
-          userData.loggedIn = true;
-
-          self.setUser(userData);
-        }
-        else {
-          self.logout();
-        }
-        if (callback && callback.success) {
-          callback.success(res);
-        }
-      }
-      else {
-        self.logout();
-        if (callback && callback.error) {
-          callback.error(res);
-        }
-      }
-
-      if (callback && callback.complete) {
-        callback.complete(res);
-      }
-    });
-};
+//var isAuthenticated = function(callback) {
+//  var self = this;
+//  var token = getToken();
+//  request
+//    .get('/user')
+//    .type('json')
+//    .set({
+//      'authorization': 'Bearer ' + token
+//    })
+//    .end(function(res) {
+//      if (res.ok) {
+//        if (res.body && res.body.user) {
+//          var userData = res.body.user;
+//          userData.loggedIn = true;
+//
+//          self.setUser(userData);
+//        }
+//        else {
+//          self.logout();
+//        }
+//        if (callback && callback.success) {
+//          callback.success(res);
+//        }
+//      }
+//      else {
+//        self.logout();
+//        if (callback && callback.error) {
+//          callback.error(res);
+//        }
+//      }
+//
+//      if (callback && callback.complete) {
+//        callback.complete(res);
+//      }
+//    });
+//};
 
 
 /* User Actions
@@ -152,7 +143,7 @@ userActions.login.listen(function(form, callback) {
 
 userActions.logout.listen(function() {
   // Remove token
-  _setToken('', -1);
+  setToken('', -1);
 
   // Reset user to defaults
   userActions.setUser(userDefaults);
