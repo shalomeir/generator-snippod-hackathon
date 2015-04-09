@@ -7,7 +7,7 @@ We'd like to this service based on full stack single page web application archit
 Snippod's first architecture used a this kind of technology, **React + Flux (RefluxJS) + Express (Node.js) + Mongo DB**.
 [This stack](http://www.gliffy.com/go/publish/7401617) is presented by diagram too.
 
-But we decide server side stack use a django REST Framework. So I dropped this stack. 
+**But we decide server side stack use a django REST Framework. So I dropped this stack.** 
 
 ## Base Repository, Module
 
