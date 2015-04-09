@@ -3,7 +3,7 @@
 var Reflux = require('reflux'),
     postActions = require('../actions/postActions');
 
-var postsPerPage = 8;
+var postsPerPage = 200;
 
 var postsStore = Reflux.createStore({
 

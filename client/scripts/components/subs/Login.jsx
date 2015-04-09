@@ -42,7 +42,7 @@ var Login = React.createClass({
   onErrorMessage: function(errorMessage) {
     this.refs.submit.getDOMNode().disabled = false;
     var errorSentence;
-    if (errorMessage.info) {
+    if (typeof errorMessage.info !== 'undefined') {
       errorSentence = errorMessage.info[0].msg;
     } else {
       errorSentence = null;
@@ -90,7 +90,7 @@ var Login = React.createClass({
           <label htmlFor="password">Password</label><br />
           <input type="password" name="password" placeholder="Password" id="password" ref="password"/><br />
           <button type="submit" className="button button-primary" ref="submit">
-            { this.state.submitted ? <Spinner /> : 'Sign In' }
+            { this.state.submitted ? <Spinner /> : 'Log in' }
           </button>
         </form>
         { error }

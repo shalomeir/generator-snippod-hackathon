@@ -5,7 +5,10 @@
 
 var Reflux = require('reflux'),
     request = require('superagent'),
+    serialize = require('form-serialize'),
     { getToken, setToken } = require('../utils/tokenControl');
+
+var messagesActions = require('./messagesActions');
 
 var postActions = Reflux.createActions({
   // post actions
@@ -27,22 +30,26 @@ var postActions = Reflux.createActions({
   'listenToPosts': {asyncResult: true},
   'stopListeningToProfile': {},
   'stopListeningToPosts': {},
-  'stopListeningToPost': {}
+  'stopListeningToPost': {},
+
+  //refresh Component
+  'updateSortBy': {}
 });
 
 
 /* Auth Method
  ===============================*/
 
-var _RequestGet = function (action, callback) {
-  var token = getToken();
+var _requestGet = function (action, query, callback) {
+  //var token = getToken();
 
   request
     .get(action)
     .type('json')
-    .set({
-      'authorization': 'Bearer ' + token
-    })
+    .query(query)
+    //.set({
+    //  'authorization': 'Bearer ' + token
+    //})
     .end(function(res) {
       if (res.ok) {
         if (res.body && res.body.postsSnapshot) {
@@ -61,28 +68,6 @@ var _RequestGet = function (action, callback) {
         if (callback && callback.error) {
           callback.error(res);
         }
-        // 임시로 만들어 보내보기.
-        postActions.listenToPosts.completed([
-          {
-            'creator':'seonggyu',
-            'creatorUID':'uid00001',
-            'time':1426483141980,
-            'title':'helwel akjldkjalsj',
-            'upvotes':1,
-            'url':'http://www.naver.com',
-            'key':'00023'
-          },
-          {
-            'creator':'shalskdj',
-            'creatorUID':'uid00002',
-            'time':1426483141983,
-            'title':'til daskjl',
-            'upvotes':11,
-            'url':'http://www.shalomeir.com',
-            'key':'00021'
-          }
-        ]);
-
       }
       if (callback && callback.complete) {
         callback.complete(res);
@@ -91,18 +76,53 @@ var _RequestGet = function (action, callback) {
 };
 
 
+var _postForm = function(form, callback){
+  var postData = serialize(form);
+  var postUrl = form.getAttribute('action') || window.location.pathname;
+  var token = getToken();
+  var options = callback.options || {};
+
+  request
+    .post(postUrl)
+    .type('form')
+    .set({
+      'authorization': 'Bearer ' + token,
+      'X-Requested-With': 'XMLHttpRequest'
+    })
+    .send(postData)
+    .end(function(res) {
+      if (res.ok) {
+        // If user needs to be updated
+        //if (options.refresh) {
+        //  //this.transitionTo('posts', { pageNum: 1 });
+        //}
+        messagesActions.setMessages(res.body);
+        messagesActions.setError({});
+      }
+      else {
+        if (callback && callback.error) {
+          callback.error(res);
+        }
+        messagesActions.setError(res.body);
+      }
+      if (callback && callback.complete) {
+        callback.complete(res);
+      }
+    });
+
+};
+
 
 /* Post Actions
  ===============================*/
 
-postActions.submitPost.listen(function(post) {
-  //var newPostRef = postsRef.push(post, function(error) {
-  //  //if (error !== null) {
-  //  //  actions.postError(error.code);
-  //  //} else {
-  //  //  actions.goToPost(newPostRef.key());
-  //  //}
-  //});
+postActions.submitPost.listen(function(form,callback) {
+  var cb = callback || function() {};
+  cb.options = {
+    refresh: true
+  };
+  _postForm(form, cb);
+
 });
 
 postActions.deletePost.listen(function(postId) {
@@ -183,8 +203,15 @@ postActions.deleteComment.preEmit = function(commentId, postId) {
 
 /* API Actions
  ===============================*/
-postActions.listenToPosts.listen(function(pageNum) {
-  _RequestGet('/posts/'+pageNum);
+postActions.listenToPosts.listen(function(pageNum, sortOption) {
+  var query = {
+    offset:pageNum,
+    limit:200,
+    sortOption: sortOption||'time'
+  };
+
+  _requestGet('/posts', query);
+
 });
 
 

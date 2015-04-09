@@ -43,7 +43,7 @@ var Register = React.createClass({
   onErrorMessage: function(errorMessage) {
     this.refs.submit.getDOMNode().disabled = false;
     var errorSentence;
-    if (errorMessage.errors) {
+    if (typeof errorMessage.errors !== 'undefined') {
       errorSentence = errorMessage.errors[0].msg;
     } else {
       errorSentence = null;

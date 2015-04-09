@@ -29,6 +29,10 @@ var userSchema = new mongoose.Schema({
   resetPasswordExpires: Date
 });
 
+userSchema.virtual('username').get(function () {
+  return this.firstName + ' ' + this.lastName;
+});
+
 // Run before saving any data
 userSchema.pre('save', function(next) {
   var user = this;

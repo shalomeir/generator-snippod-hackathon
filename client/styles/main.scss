@@ -424,7 +424,7 @@ textarea {
     }
 
     &:before { transform: rotate(90deg); }
-    &:after { transform: rotate(0); }
+    &:after { transform: rotate(0deg); }
 
     .panel-open & {
         &:before { transform: rotate(135deg); }
@@ -465,17 +465,15 @@ textarea {
 ====================================== */
 
 .header-panel {
-    z-index: -1;
+    position: relative;
     padding: $small;
-    background: $panel;
-    transition: transform 0.3s;
-    transform: translateY(0);
+    background: lighten($panel, 15%);;
+//    transition: transform 0.3s;
+//    transform: translateY($nav-height);
     font-size: 0;
     color: #fff;
     a { color: #fff; }
-    .panel-open & {
-        transform: translateY($nav-height);
-    }
+
 }
 
 .panel-form {

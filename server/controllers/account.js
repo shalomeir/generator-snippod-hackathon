@@ -298,9 +298,9 @@ module.exports = {
   login: login,
   postLogin: postLogin,
   register: register,
-  postReset: postReset,
-  reset: reset,
+  //postReset: postReset,
+  //reset: reset,
   forgot: forgot,
-  postForgot: postForgot,
+  //postForgot: postForgot,
   settings: settingsPage
 };

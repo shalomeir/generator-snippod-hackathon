@@ -4,43 +4,78 @@
 
 'use strict';
 
-var Posts = require('mongoose').model('posts');
+var Post = require('mongoose').model('post');
+var User = require('mongoose').model('user');
 var auth = require('../auth');
+var validCheck = require('../utils/validCheck');
+
+
+// Create a static getTweets method to return tweet data from the db
+var getPosts = function(offset, limit, sortOption, callback) {
+
+  var posts = [];
+  var sortObj = {};
+  sortObj[sortOption] = -1;
+
+  // Query the db, using skip and limit to achieve page chunks
+  Post.find({},'-commentsNum -downvotes -favs',
+    {skip: offset, limit: limit}).sort(sortObj).exec(function(err,docs){
+
+    // If everything is cool...
+    if(!err) {
+      posts = docs;  // We got tweets
+    }
+    // Pass them back to the specified callback
+    callback(err, posts);
+  });
+
+};
 
 /**
- * GET /user
- * Read user data.
+ * GET /posts
+ * Read posts data.
  */
-var readAccount = function(req, res, next) {
-  Posts.findById(req.user._id, '-password', function(err, user) {
+var readPosts = function(req, res, next) {
+
+  var query = req.query;
+
+  getPosts(query.offset, query.limit, query.sortOption, function(err, posts) {
     if (err) {
       return next(err);
     }
-    if (!user) {
+    if (!posts) {
       return res.status(400).json({
         errors: [{
-          msg: 'Failed to authenticate'
+          msg: 'No more posts.'
+        }]
+      });
+    }
+    if(posts.length===0) {
+      return res.status(200).json({
+        info: [{
+          msg: 'No more posts.'
         }]
       });
     }
     res.status(200).json({
-      user: user
+      postsSnapshot: posts
     });
+
   });
 };
 
 /**
- * POST /user
- * Create a new local account.
+ * POST /posts
+ * Create a new post.
  * @param email
  * @param password
  * @param confirmPassword
  */
 
-var createAccount = function(req, res, next) {
-  req.assert('email', 'Email is not valid').isEmail();
-  req.assert('password', 'Password must be at least 6 characters long').len(6);
-  req.assert('confirmPassword', 'Passwords do not match').equals(req.body.password);
+var createPost = function(req, res, next) {
+
+  req.assert('url', 'url is not a url function').isURL();
+  //req.assert('creatorUID', 'You are not you').equals(req.body.creatorUID);
 
   var errors = req.validationErrors();
 
@@ -50,40 +85,32 @@ var createAccount = function(req, res, next) {
     });
   }
 
-  var user = new Posts({
-    email: req.body.email,
-    password: req.body.password
-  });
-
-  Posts.findOne({
-    email: req.body.email
-  }, '-password', function(err, existingUser) {
+  User.findById(req.user._id, '-password', function(err, user) {
     if (err) {
       return next(err);
     }
-    if (existingUser) {
-      res.status(409).json({
-        errors: [{
-          param: 'email',
-          msg: 'Account with that email address already exists.'
-        }]
-      });
-    }
-    user.save(function(err) {
+
+    var post = new Post({
+      creator: user.username,
+      creatorUID: user._id,
+      title: req.body.title,
+      url: req.body.url
+    });
+
+    post.save(function(err) {
       if (err) {
         return next(err);
       }
       // Send user and authentication token
-      var token = auth.signToken(user._id, user.role);
       res.status(200).json({
-        token: token,
-        user: user,
         success: [{
-          msg: 'Account created successfully.'
+          msg: 'Post created successfully.'
         }]
       });
     });
   });
+
+
 };
 
 /**
@@ -102,7 +129,7 @@ var updateProfile = function(req, res, next) {
     });
   }
 
-  Posts.findById(req.user._id, '-password', function(err, user) {
+  Post.findById(req.user._id, '-password', function(err, user) {
     if (err) {
       return next(err);
     }
@@ -144,7 +171,7 @@ var updatePassword = function(req, res, next) {
     });
   }
 
-  Posts.findById(req.user._id, function(err, user) {
+  Post.findById(req.user._id, function(err, user) {
     if (err) {
       return next(err);
     }
@@ -170,7 +197,7 @@ var updatePassword = function(req, res, next) {
  */
 
 var deleteAccount = function(req, res, next) {
-  Posts.findByIdAndRemove(req.user._id, function(err) {
+  Post.findByIdAndRemove(req.user._id, function(err) {
     if (err) {
       return next(err);
     }
@@ -183,8 +210,8 @@ var deleteAccount = function(req, res, next) {
 };
 
 module.exports = {
-  readAccount: readAccount,
-  createAccount: createAccount,
+  readPosts: readPosts,
+  createPost: createPost,
   updateProfile: updateProfile,
   updatePassword: updatePassword,
   deleteAccount: deleteAccount

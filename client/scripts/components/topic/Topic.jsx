@@ -12,6 +12,7 @@ var React = require('react'),
     //components
     TopicCard = require('./topicCard.jsx'),
     Posts = require('./Posts.jsx'),
+    ComposerBox = require('./ComposerBox.jsx'),
     //actions
     postActions = require('../../actions/postActions');
 
@@ -36,7 +37,8 @@ var Topic = React.createClass({
       <DocumentTitle title='Topic title'>
         <div className="topic main-container content full-width">
           <TopicCard/>
-          <h1>And posts list</h1>
+          <ComposerBox {...this.props} />
+          <h3>And posts list</h3>
           <Posts {...this.props} />
         </div>
       </DocumentTitle>

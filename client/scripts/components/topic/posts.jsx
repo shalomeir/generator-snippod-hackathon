@@ -14,7 +14,8 @@ var React = require('react'),
 var Posts = React.createClass({
 
   mixins: [
-    Reflux.listenTo(postsStore, 'onStoreUpdate')
+    Reflux.listenTo(postsStore, 'onStoreUpdate'),
+    Reflux.listenTo(postActions.updateSortBy, 'updateSortBy')
   ],
 
   getInitialState: function() {
@@ -44,6 +45,7 @@ var Posts = React.createClass({
 
   updateSortBy: function(e) {
     e.preventDefault();
+
     var currentPage = this.state.currentPage || 1;
 
     postActions.setSortBy(this.refs.sortBy.getDOMNode().value);
@@ -59,7 +61,6 @@ var Posts = React.createClass({
       this.transitionTo('posts', { pageNum: 1 });
     }
   },
-
 
   render: function() {
     var posts = this.state.posts;
